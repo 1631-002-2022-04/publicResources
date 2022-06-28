@@ -1,0 +1,2 @@
+# publicResources
+Available course materials
