@@ -27,23 +27,27 @@ As an analogy let's compare *Elephants* with *Strings*
 
 We will investigate **Classes** in much more detail a bit later in the course but for now 
 
-***recognize that every example (instance) of a class can have its own particular attributes, but all instances of the class 'know' the same methods.***
+***recognize that every example (instance) of a class can have its own particular attributes, but all instances of the class 'inherits' the same methods.***
 
 And, although we've assumed that all the data types we've seen up to now are just values,
 
-***each example of a data type is really an instance of its class, as so it will have attributes and methods.***
+***with the string data type*** (and soon you will learn about `lists`)
+
+***every string is really an instance of its String class, meaning it will have attributes and 'String' methods.***
 
 ---
 
 ## The String Class
 
 Every time you've defined a string, either implicitly or explicitly:
+
 ``` py
 a_string = "this that"
 b_string = str(98.23)
 ```
 
 you have created an *instance* of the String class so it 'knows':
+
 - it's contents have an order (index)
   - and then can be *sliced* 
 - it works with common Python operators and functions in ways specific to its class
@@ -56,25 +60,34 @@ All strings number (index) the symbols they contain.
 In Python the characters can be indexed *positively* or *negatively*.
 
 The syntax is:
+
 > `any_string[index]`
-> where
+
+where
+
 > - the indices count 
 >    - from left to right starting at ***0***
 >    - from right to left starting at ***-1***
 > - the indices must be integers
-> and
+
+and
+
 > - the positive index cannot be bigger than the ***(length of the string - 1)***
 > - the negative index cannot be smaller than the ***length of the string***
 
 For example with this string variable:
 
 > `variable = "cheEs3"`
+
 with 
+
 > `how_long = len(variable) # how_long = 6`
-> 
-then
-| Symbols: | c | h | e | E | s | 3 |
-|   -      | - | - | - | - | - | - |
+
+then each of its characters can be located with an index:
+
+
+|  | c | h | e | E | s | 3 |
+|-| - | - | - | - | - | - |
 |Positive  | 0 | 1 | 2 | 3 | 4 | 5 |
 |Negative  | -6 | -5 | -4 | -3 | -2 | -1 |
 
