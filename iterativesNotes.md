@@ -97,8 +97,8 @@ and
 #### Try it yourself
 
 1. Create code that allows you to enter in your first and last name as one variable.
-2. Display the *first* letter of your last name with a negative index and with a postive index.
-3. What is the index of the space between your names? Assign that symbol to a variable.
+1. Display the *first* letter of your last name with a negative index and with a postive index.
+1. What is the index of the space between your names? Assign that symbol to a variable.
 
 E.g
 ``` py
@@ -134,4 +134,16 @@ print(name[1:17:3] # produces usaeSp
 And how `for` loops work with range?
 
 > `for i in range(10):`
+
+---
+
+#### Try it yourself
+
+1. Create code that allows you to enter the full title of your favourite [*Star Wars* movie](https://en.wikipedia.org/wiki/List_of_Star_Wars_films).
+2. Use slicing to create new variables for the first word, last word and one of the middle words.
+
+---
+
+
+
 
