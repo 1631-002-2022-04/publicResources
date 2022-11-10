@@ -155,6 +155,14 @@ And how `for` loops work with range?
 1. Create code that allows you to enter the full title of your favourite [*Star Wars* movie](https://en.wikipedia.org/wiki/List_of_Star_Wars_films).
 2. Use slicing to create new variables for the first word, last word and one of the middle words.
 
+E.g.
+``` py
+name = "Rogue One: A Star Wars Story"
+first_word = name[:5]
+middle_word = name[13:17]
+last_word = name[-5:]
+```
+
 ---
 
 
