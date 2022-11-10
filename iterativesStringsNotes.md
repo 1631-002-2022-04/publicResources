@@ -1,4 +1,4 @@
-# Strings and Lists
+# Iterative Data Types: Part 1 - Strings
 ---
 
 ## Introduction:  Data Types - More Than Meets The Eye
@@ -164,6 +164,81 @@ last_word = name[-5:]
 ```
 
 ---
+
+### Strings and Common Built-in Functions
+
+Because strings are classes, their attributes can be discovered by Python's built in functions.
+
+Evaluted using each character's [ASCII value](https://www.asciitable.com/)
+
+> `= max()`
+> `= min()`
+
+Works like this:
+
+``` py
+biggest = max("a to z A to Z")    # will return 'z'
+smallest = min("PJ Perri")        # will return ' ' (the space)
+if "AAB" < "AAA":
+    print("'AAB' is smaller than 'AAA'")
+else:
+    print("'AAB' is larger than 'AAA'")   # this is what is displayed
+```
+
+***Notice how space is encoded as a 32, so it will be smaller than number symbols, which, in turn, are encoded with a smaller ASCII number than upper-case letter symbols, leaving upper-case letter symbols as biggest characters.***
+
+This built-in function is especially useful when one needs to iterate over string (aka look at each character one at a time).
+
+> `= len()`
+
+```py
+cheese = "Rogue One: A Star Wars Story"
+i=0
+while i < len (cheese):
+    print(cheese[i])
+    i +=1
+####
+toast = input("Type in your address ")
+for index in (range(  len(toast)   )):
+    # stuff done at each letter's index...no matter how long the input was
+```
+
+### Strings and their own Methods
+
+The String class has a [long list of methods](https://docs.python.org/3/library/stdtypes.html#string-methods) that all strings inherit the moment they are defined.
+
+For example, try the following:
+
+```py
+aString = "This"
+bString = "that"
+cString = "To be or not to be. That is the question."
+
+print(aString.upper())
+print(bString.lower())
+words_list = cString.split(" ")
+print(words_list)
+```
+
+####String Class Methods to Know. (UNDERCONSTRUCTION and may be dropped)
+
+Appreciate, the methods listed below are available to any named string variable.
+
+#### String Value Returning Methods
+.count()
+index() rindex()
+removeprefix() removesuffix()
+replace()
+.split()
+#### Boolean String Methods
+isupper() islower() isalpha() isnumeric()* endswith() startswith()
+#### Those that deal with capitaliztion
+> `= any_string.upper()    # and .lower()
+
+> `= any_string.islower()  # and .isupper()
+
+> `
+
 
 
 
