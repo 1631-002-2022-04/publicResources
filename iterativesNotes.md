@@ -92,6 +92,8 @@ and
 
 > `new_string = variable[1] + variable[4] # assigns 'hs' to new_string`
 
+---
+
 #### Try it yourself
 
 1. Create code that allows you to enter in your first and last name as one variable.
@@ -106,5 +108,30 @@ spacer_at = 2
 the_space = name[2]
 ```
 
+---
+
 ### String Slicing using Indices
+
+With the following syntax, any string can be sliced up into a new string. **Note the default values and the use of colons to separate the parameters***
+
+`new_string = any_string[start=0: stop=len(any_string):step-1]`
+
+Thus:
+
+``` py
+name = "Rufus Xavier Sasperilla"
+first_name = name[:5:]
+second_name = name[6:12:]
+third_name = name[13::]
+# and
+print(name[1:17:3] # produces usaeSp
+```
+***BTW: Are you noticing how start, stop, step is similar to how loops work?***
+> - counting from zero `i = 0`
+> - up to, but not including the stop, `while i < 10:`
+> - and then incremented, `i += 1`
+
+And how `for` loops work with range?
+
+> `for i in range(10):`
 
