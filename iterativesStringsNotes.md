@@ -278,6 +278,18 @@ And these interesting string methods that deal with capitalization:
 plus, be sure to look at their associated Boolean methods like `= any_string.islower()` etc.
 
 ---
+
+# Summary
+
+Strings are more than just a primitive data type: they are a class of object where every instance of a string has:
+ - attributes that can be accessed with Python's built in functions.
+ - an inate order: indexing and slicing <br>and
+ - methods that are useful when working with strings.
+
+***AND... what you've just learned here will be VERY useful because it is similar to the next important Python data type we will be discussing...***
+
+# Lists
+
 ---
 
 ***PJ's version of a_string.replace(old, new) (#4 above)
