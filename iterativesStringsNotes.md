@@ -225,19 +225,53 @@ print(words_list)
 Appreciate, the methods listed below are available to any named string variable.
 
 #### String Value Returning Methods
-.count()
-index() rindex()
-removeprefix() removesuffix()
-replace()
-.split()
-#### Boolean String Methods
-isupper() islower() isalpha() isnumeric()* endswith() startswith()
-#### Those that deal with capitaliztion
-> `= any_string.upper()    # and .lower()
 
-> `= any_string.islower()  # and .isupper()
+Here are a few string methods that return values that are worth knowing about:
 
-> `
+`= any_string.count(subString)`
+> counts the number of the subString in the original string
+
+Notice how the following 2 versions are equivalent
+```py
+movie_title = "The Good, the Bad, and the Ugly"
+subString = "the"
+
+# version 1
+x = movie_title(subString)
+
+# version 2
+tally = 0
+i = 0
+while i < len(movie_title):
+    if movie_title[i:3] == subString:
+        tally += 1
+    
+    i += 1
+ ```
+ #### Try some yourself
+ 
+ For each of the following string methods, look up what they do and see if you can code your own function that uses string indexing, string slicing and looping through a string, to produce the same result.
+ - `= any_string.startswith(subString)` or `= any_string.endswith(subString)` where your function returns a Boolean
+ - `= any_string.removeprefix(prefix)` or `= any_string.removesuffix(suffix)` where your function returns a new *shortened* string
+ - `= any_string.index(subString)` or `=any_string.rindex(subString)` where your function returns the index where the substring starts.
+
+ Here's a tricky one:
+ - `= any_string.replace(oldString, newString)` 
+ > Hint: using `= any_string.index(oldString)' and `=len(oldString)` to find the oldString's start and stop points, <br>
+then generate string slices from before and after, and concatenate them, along with the newString into a brand result.
+
+### Other String methods to explore:
+- `= any_string.split()` Try using it to split up a sentence into a list of words.
+
+**Boolean String Methods**
+
+- `= any_string.isupper()`,  `.islower()`, `.isalpha()`, `.isnumeric()` (this one does *not* work how we'd like it to),
+<BR>`.endswith(ending)`, and `.startswith(starting)`
+
+**And these interesting string methods taht deal with capitalization**
+> `= any_string.upper()`, `.lower()`, '.title()`, `.capitalize()`
+
+  and their associated Boolean methods like `= any_string.islower()` etc.
 
 
 
