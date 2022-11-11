@@ -237,27 +237,27 @@ movie_title = "The Good, the Bad, and the Ugly"
 subString = "the"
 
 # version 1
-x = movie_title(subString)
+x = movie_title.count(subString)
 
 # version 2
 tally = 0
 i = 0
 while i < len(movie_title):
-    if movie_title[i:3] == subString:
+    if movie_title[i:i+3] == subString:
         tally += 1
     
     i += 1
  ```
  #### Try some yourself
  
- For each of the following string methods, look up what they do and see if you can code your own function that uses string indexing, string slicing and looping through a string, to produce the same result.
+ For each of the following string methods, look up what they do and see if you can code your own function that uses *string indexing*, *string slicing* and *definite loops* applied to a string, to produce the same result.
  1. `= any_string.startswith(subString)` or `= any_string.endswith(subString)` where your function returns a Boolean
  2. `= any_string.removeprefix(prefix)` or `= any_string.removesuffix(suffix)` where your function returns a new *shortened* string
  3. `= any_string.index(subString)` or `=any_string.rindex(subString)` where your function returns the index where the substring starts.
 
  Here's a tricky one:
  
- 4. `= any_string.replace(oldString, newString)` 
+ 4. `= any_string.replace(oldString, newString)` Look for a solution at the end of this document
  
  > Hint: using `= any_string.index(oldString)' and `=len(oldString)` to find the oldString's start and stop points, <br>
 then generate string slices from before and after, and concatenate them, along with the newString into a brand result.
@@ -267,15 +267,38 @@ then generate string slices from before and after, and concatenate them, along w
 
 **Boolean String Methods**
 
-- `= any_string.isupper()`,  `.islower()`, `.isalpha()`, `.isnumeric()` (this one does *not* work how we'd like it to),
-<BR>`.endswith(ending)`, and `.startswith(starting)`
+Check out these string methods, try 'em, and contemplate how you might use them in decision structures:
 
-**And these interesting string methods taht deal with capitalization**
+- `= any_string.isupper()`,  `.islower()`, `.isalpha()`, `.isnumeric()` (this one does *not* work how we'd like it to),<br>`.endswith(ending)`, and `.startswith(starting)`
+ 
+And these interesting string methods that deal with capitalization:
+
 > `= any_string.upper()`, `.lower()`, `.title()`, `.capitalize()`
 
-and their associated Boolean methods like `= any_string.islower()` etc.
+plus, be sure to look at their associated Boolean methods like `= any_string.islower()` etc.
 
+---
+---
 
+***PJ's version of a_string.replace(old, new) (#4 above)
+  
+ ```py
+def replaceV2(total_string:str, oldString:str, newString:str) -> str:
+    ''' can you follow my algorithm?'''
+    start = total_string.index(oldString)
+    stop = start + len(oldString)
+    first_half = total_string[:start]
+    second_half = total_string[stop:]
+  
+    resulting_string = first_half + newString + second_half
+    return resulting_string
+  
+test_string = "absolutely"
+changed_string = replaceV2(test_string, "lute", "tootenlute")
 
+# versus
+
+changed_string2 = test_string.replace("lute", "tootenlute")
+```
 
 
