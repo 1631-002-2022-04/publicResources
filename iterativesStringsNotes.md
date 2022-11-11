@@ -251,12 +251,14 @@ while i < len(movie_title):
  #### Try some yourself
  
  For each of the following string methods, look up what they do and see if you can code your own function that uses string indexing, string slicing and looping through a string, to produce the same result.
- - `= any_string.startswith(subString)` or `= any_string.endswith(subString)` where your function returns a Boolean
- - `= any_string.removeprefix(prefix)` or `= any_string.removesuffix(suffix)` where your function returns a new *shortened* string
- - `= any_string.index(subString)` or `=any_string.rindex(subString)` where your function returns the index where the substring starts.
+ 1. `= any_string.startswith(subString)` or `= any_string.endswith(subString)` where your function returns a Boolean
+ 2. `= any_string.removeprefix(prefix)` or `= any_string.removesuffix(suffix)` where your function returns a new *shortened* string
+ 3. `= any_string.index(subString)` or `=any_string.rindex(subString)` where your function returns the index where the substring starts.
 
  Here's a tricky one:
- - `= any_string.replace(oldString, newString)` 
+ 
+ 4. `= any_string.replace(oldString, newString)` 
+ 
  > Hint: using `= any_string.index(oldString)' and `=len(oldString)` to find the oldString's start and stop points, <br>
 then generate string slices from before and after, and concatenate them, along with the newString into a brand result.
 
@@ -269,9 +271,9 @@ then generate string slices from before and after, and concatenate them, along w
 <BR>`.endswith(ending)`, and `.startswith(starting)`
 
 **And these interesting string methods taht deal with capitalization**
-> `= any_string.upper()`, `.lower()`, '.title()`, `.capitalize()`
+> `= any_string.upper()`, `.lower()`, `.title()`, `.capitalize()`
 
-  and their associated Boolean methods like `= any_string.islower()` etc.
+and their associated Boolean methods like `= any_string.islower()` etc.
 
 
 
