@@ -288,7 +288,6 @@ Strings are more than just a primitive data type: they are a class of object whe
 
 ***AND... what you've just learned here will be VERY useful because it is similar to the next important Python data type we will be discussing...***
 
-# Lists
 
 ---
 
